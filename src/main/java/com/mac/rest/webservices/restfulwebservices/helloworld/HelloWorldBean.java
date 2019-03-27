@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.mac.rest.webservices.restfulwebservices;
+package com.mac.rest.webservices.restfulwebservices.helloworld;
 
 /**
  * @author Administrator
  *
  */
-public class HelloWorldBean {	
-	
+public class HelloWorldBean {
+
 	private String message;
 
 	public HelloWorldBean(String message) {

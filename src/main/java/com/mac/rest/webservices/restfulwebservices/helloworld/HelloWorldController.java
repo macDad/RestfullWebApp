@@ -32,11 +32,11 @@ public class HelloWorldController {
 	public String helloWorldInternationalized() {
 		return messageSource.getMessage("good.morning.message", null, LocaleContextHolder.getLocale());
 	}
-	
-	//@GetMapping(path = "/hello-world-internationalized")
-	//public String helloWorldInternationalized(
-	//		@RequestHeader(name = "Accept-Language", required = false) Locale locale) {
-	//	return messageSource.getMessage("good.morning.message", null, locale);
-	//}
+
+	// @GetMapping(path = "/hello-world-internationalized")
+	// public String helloWorldInternationalized(
+	// @RequestHeader(name = "Accept-Language", required = false) Locale locale) {
+	// return messageSource.getMessage("good.morning.message", null, locale);
+	// }
 
 }

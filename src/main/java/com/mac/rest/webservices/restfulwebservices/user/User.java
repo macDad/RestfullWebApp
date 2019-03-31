@@ -33,6 +33,15 @@ public class User {
 	@ApiModelProperty(notes = "birthday should be in the pass")
 	private Date birthDate;
 
+	
+	
+	/**
+	 * 
+	 */
+	public User() {
+		super();
+	}
+
 	/**
 	 * @param id
 	 * @param naem

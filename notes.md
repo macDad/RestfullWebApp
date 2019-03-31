@@ -13,3 +13,14 @@ User -> Posts
 - Create a posts for a User			- POST /users/{id}/posts
 - Retrieve details of a post		- GET /users/{id}/posts/{post_id}
 
+
+
+#### Table Structure
+
+create table user (
+	id integer not null, 
+	birth_date timestamp, 
+	name varchar(255), 
+	primary key (id)
+)
+

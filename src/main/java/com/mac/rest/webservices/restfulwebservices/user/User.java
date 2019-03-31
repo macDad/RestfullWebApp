@@ -4,10 +4,12 @@
 package com.mac.rest.webservices.restfulwebservices.user;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
@@ -33,6 +35,8 @@ public class User {
 	@ApiModelProperty(notes = "birthday should be in the pass")
 	private Date birthDate;
 
+	@OneToMany(mappedBy = "user")
+	private List<Post> posts;
 	
 	
 	/**
@@ -96,9 +100,23 @@ public class User {
 		this.birthDate = birthDate;
 	}
 
+	/**
+	 * @return the posts
+	 */
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	/**
+	 * @param posts the posts to set
+	 */
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+
 	@Override
 	public String toString() {
-		return String.format("User [id=%s, name=%s, birthDate=%s]", id, name, birthDate);
+		return String.format("User [id=%s, name=%s, birthDate=%s, posts=%s]", id, name, birthDate, posts);
 	}
 
 }
